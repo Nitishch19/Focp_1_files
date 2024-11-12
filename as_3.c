@@ -37,8 +37,8 @@ int main() {
                 }
             } else if (choice == 'f') {
                 if (num1 >= 0) {
-                    float sqrtValue = sqrt(num1);
-                    printf("sqrt(%.2f) = %.2f\n", num1, sqrtValue);
+                    float sqrtV = sqrt(num1);
+                    printf("sqrt(%.2f) = %.2f\n", num1, sqrtV);
                 } else {
                     printf("Error: Square roots are only defined for non-negative numbers.\n");
                 }
