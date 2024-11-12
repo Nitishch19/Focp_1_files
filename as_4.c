@@ -1,58 +1,63 @@
-//Rock Paper Scissors
 #include<stdio.h>
-void random_selector_rpc_game(char choice){
+
+void random_selector_rpc_game(char choice) {
     int uc;
-    printf("select random a number between 0-100 : ");
-    scanf(" %d",&uc);
-    if(uc>=0 && uc<33){
-        if(choice == 'p'){
-            printf("The computer choose Rock So,\nYOU WIN \n");
+    printf("Select a random number between 0-100: ");
+    scanf(" %d", &uc);
+    
+    if (uc >= 0 && uc < 33) {
+        if (choice == 'p') {
+            printf("The computer chose Rock 👊 So,\n👊 🖐️\nYOU WIN 🎉\n");
         }
-        else if(choice == 'r'){
-            printf("The computer choose Rock so,\n It is A TIE \n");
+        else if (choice == 'r') {
+            printf("The computer chose Rock 👊 So,\n👊 👊\nIt is A TIE 🤝\n");
         }
-        else{
-            printf("The computer choose Rock so,\nBetter LUCK NEXT TIME!\n");
-        }
-    }
-    else if(uc>=33 && uc<66){
-        if(choice == 'p'){
-            printf("The computer choose Paper so,\n It is A TIE \n");
-        }
-        else if(choice == 'r'){
-            printf("The computer choose Paper So,\n YOU WIN  \n");
-        }
-        else{
-            printf("The computer choose Paper so,\n  Better LUCK NEXT TIME!\n");
+        else {
+            printf("The computer chose Rock 👊 So,\n👊 ✌️\nBetter LUCK NEXT TIME!\n");
         }
     }
-    else if(uc>=66 && uc<=100){
-        if(choice == 's'){
-            printf("The computer choose Scissors so,\n  It is A TIE \n");
+    else if (uc >= 33 && uc < 66) {
+        if (choice == 'p') {
+            printf("The computer chose Paper 🖐️ So,\n🖐️ 🖐️\nIt is A TIE 🤝\n");
         }
-        else if(choice == 'p'){
-            printf("The computer choose Scissors So,\n YOU WIN \n");
+        else if (choice == 'r') {
+            printf("The computer chose Paper 🖐️ So,\n👊 🖐️\nYOU WIN 🎉\n");
         }
-        else{
-            printf("The computer choose Scissors so,\n Better LUCK NEXT TIME!\n");
+        else {
+            printf("The computer chose Paper 🖐️ So,\n🖐️ ✌️\nBetter LUCK NEXT TIME!\n");
         }
     }
-    else{printf("Don't Break The Rules.");}
+    else if (uc >= 66 && uc <= 100) {
+        if (choice == 's') {
+            printf("The computer chose Scissors ✌️ So,\n✌️ ✌️\nIt is A TIE 🤝\n");
+        }
+        else if (choice == 'p') {
+            printf("The computer chose Scissors ✌️ So,\n🖐️ ✌️\nYOU WIN 🎉\n");
+        }
+        else {
+            printf("The computer chose Scissors ✌️ So,\n👊 ✌️\nBetter LUCK NEXT TIME!\n");
+        }
+    }
+    else {
+        printf("Don't Break The Rules.\n");
+    }
 }
-int main(){
-    char ch,yn;
-    start:
-    printf("\nThe Master Computer Welcomes you to the game of Rock,Paper,Scissors.\n");
-    printf("Enter your choice:\nRock - r\nPaper - p\nScissors - s\n");
-    scanf(" %c",&ch);
-    random_selector_rpc_game(ch);
-    printf("\n");
-    printf("Want to play Again select y for yes and no for n :");
-    scanf(" %c",&yn);
-    if(yn == 'y'){
-        goto start;
-    }
-    if(yn != 'y' || yn == 'n'){
-        printf("BYE.");}
+
+int main() {
+    char ch, yn;
+    
+    do {
+        printf("\nThe Master Computer Welcomes you to the game of Rock, Paper, Scissors.\n");
+        printf("Enter your choice:\n👊 Rock - r\n🖐️ Paper - p\n✌️ Scissors - s\n");
+        
+        
+        scanf(" %c", &ch);
+        random_selector_rpc_game(ch);
+        
+        printf("Want to play again? Select y for yes and n for no: ");
+        
+        scanf(" %c", &yn);
+    } while (yn == 'y');
+
     return 0;
 }
