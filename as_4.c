@@ -1,3 +1,6 @@
+//Rock Paper Scissors
+//USE ONLINE COMPILER for this code to run
+
 #include<stdio.h>
 
 void random_selector_rpc_game(char choice) {
